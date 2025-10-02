@@ -2,15 +2,32 @@
 
 ## Introduction
 
-Planet Earth is commonly represented as a sphere. This truism is by no means intended as an insult to flat-earthers. Neither does it aim at reducing planet Earth to its surface only – indeed, a more correct word, inclusive of the inside of Planet Earth, could have been “ball”, but after all humans have almost exclusively known the surface of the Earth only: the deepest point can be found in the Mariana Trench in the Western Pacific Ocean, at ~11km deep, and the highest point Mount Everest stands at ~9km tall, making it that humans have throughout history spent their entire lives at 6371km from the center of the Earth, plus or minus 0.15%. So, yes, let us represent the Earth as a sphere. A globe.
+This project provides a framework to reshape the geometry of a given closed 2D surface in 3D so that distances between any 2 points reflect a custom distance. In more pompous words, it tries to construct a quasi-isometric 2D embedding in a 3D space, of a 2D surface in 3D, seen under a custom metric.
 
-This representation is accurate visually, of course. A globe is an accurate model of planet Earth, as a geographical map. However, the purposes of a map can be multifold. For instance, the first maps that were drawn reflected a practical understanding of the space, rather than the exact layout of the environment. In effect, these two aspects could have been difficult to tell apart because the speed of transportation was quasi-constant, considering the lack of diversity in means of transportation. But, this practical understanding of the space is essential in constructing a mental model of transportation within the environment. As an example, Tabula Peutingeriana, a Roman "road map" from the 4th or 5th century CE, doesn't represent geography accurately — it lays out roads like a subway map, focusing on stops and travel stages, not scale. 
+In this particular case, I wanted to deform the Earth, represented by the unit sphere in 3D, so that distances on the deformed surfaces would represent _at best_, in some sense of the terms, the travel times between 2 points. To give an idea, from New York it takes 6-7h to get to Paris, while it takes 2-3 days to get to the middle of the Atlantic Ocean, in terms of fastest accessible transportation. So on the deformed version of the Earth, the geodesic distance (meaning, the shortest distance on the surface) between what are supposed to be New York and Paris is much smaller than the distance to the middle of the Atlantic Ocean. As you might have guessed, Chronofora is the tentative name I have given to this new Earth-potato planet (feel free to let me know if you have any better ideas).
 
+You might also have guessed that this problem does not seem to have a solution: we can  safely assume that on the Earth, all the points lying on the mediatrix between NY and Paris are further away from either of them than the other city. With this in mind, if there existed an accurate 3-dimensional deformation of the Earth, it would necessarily violate continuity, and therefore not be a deformation as intended. This is one of the reasons why the embedding constructed is _quasi_-isometric.
 
-This project provides a framework to deform 2D surfaces in 3D according to custom metrics. In other words, it reshapes the geometry of a given closed 2D surface in 3D so that distances between any 2 points reflect a custom distance. In more pompous words, it tries to construct a quasi-isometric 2D embedding in a 3D space, of a 2D surface in 3D, seen under a custom metric.
+Originalyy, the aim of this project is mainly artistic. But beyond providing some cool and fun shapes, it also stands as an algorithm to visualize how given metrics can distort 2D surfaces in 3D, which may prove useful in some more concrete cases. And as far as I know, there are no other algorithms in the literature which seem to tackle this visualization problem, as all classical visualization methods assume a flat Euclidean target space.
 
-In this particular case, I wanted to deform the Earth, represented by the unit sphere in 3D, so that distances on the deformed surfaces would represent _at best_, in some sense of the terms, the travel times between 2 points. Chronofora is the name I have given to this new Earth-potato (but feel free to let me know if you have any better ideas).
+This is only a first version of Chronofora at this stage (there is a lot of room for improvement), but please let me know what you think!
 
-The aim of this project is mainly artistic I guess. But beyond providing some cool and fun shapes, it also stands as an algorithm to visualize how given metrics can distort 2D surfaces in 3D. And as far as I know, there are no other algorithms in the literature which seem to tackle this visualization problem, as all classical visualization methods assume a flat Euclidean target space.
+## Features and Project Structure
+
+The main part of the project resides in the file __get_mesh.py__. That's where it loads data associated to Chronofora, asks which cities you might want to see plotted on it, and then pops up a few windows for visualization. Feel free to check what the geometry looks like, and know there might seem to be some incoherences: this problem does not have a clear solution, and there have been some arbitrary choices in the parameters in favor of the "coolness" of the shape of Chronofora. So it is likely that there are some  pairs of points between which transportation time is very long, but which seem to weirdly close on Chronofora, or even vice-versa. This is subject to improvmeent.
+
+The rest of the project is structured as such:
+- __get_X_transportation_geometry.py__ processes open-source transportation datasets (flight, train, ferry, car) to compute transportation times between fixed "transportation stations";
+- __get_X_geometry.py__ proposes a heuristic method to compute multimodal travel times between arbitrary global locations, and then computes the pairwise distances of a regular sample of N points on Planet Earth;
+- __surface_spring_system.py__ builds the object necessary to deform the surface -- a large-scale spring system, with some additional constraints to keep the 2D aspect of the surface -- and __run_spring.py__ runs the simulation;
+- __map_utils.py__ provides some utiliary functions.
+
+## More technical paper
+
+To follow.
+
+## Acknowledgments
+
+The idea for this project actually originated a few years back, when I was interning at GeomStats under the supervision of Nina Miolane (UC Santa Barbara) and Alice Le Brigant (Université Paris Panthéon Sorbonne). Professor Andrew Blumberg (Columbia University) also helped me in approaching the problem. 
 
 
