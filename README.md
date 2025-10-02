@@ -8,7 +8,7 @@ In this particular case, I wanted to deform the Earth, represented by the unit s
 
 You might also have guessed that this problem does not seem to have a solution: we can  safely assume that on the Earth, all the points lying on the mediatrix between NY and Paris are further away from either of them than the other city. With this in mind, if there existed an accurate 3-dimensional deformation of the Earth, it would necessarily violate continuity, and therefore not be a deformation as intended. This is one of the reasons why the embedding constructed is _quasi_-isometric.
 
-Originalyy, the aim of this project is mainly artistic. But beyond providing some cool and fun shapes, it also stands as an algorithm to visualize how given metrics can distort 2D surfaces in 3D, which may prove useful in some more concrete cases. And as far as I know, there are no other algorithms in the literature which seem to tackle this visualization problem, as all classical visualization methods assume a flat Euclidean target space.
+Originally, the aim of this project is mainly artistic. But beyond providing some cool and fun shapes, it also stands as an algorithm to visualize how given metrics can distort 2D surfaces in 3D, which may prove useful in some more concrete cases. And as far as I know, there are no other algorithms in the literature which seem to tackle this visualization problem, as all classical visualization methods assume a flat Euclidean target space.
 
 This is only a first version of Chronofora at this stage (there is a lot of room for improvement), but please let me know what you think!
 
