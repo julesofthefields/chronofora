@@ -4,9 +4,16 @@
 
 This project provides a framework to reshape a closed 2D surface in 3D so that geodesic distances (the shortest path between two points along the deformed surface) reflect a custom distance metric. In other words, it constructs a 2D surface in 3D whose intrinsic geometry (geodesic distances) is quasi-isometric to a given metric space.
 
+<p align="center">
+  <img src="docs/smiling.png" alt="Chronofora 1" width="300">
+  <img src="docs/dancing.png" alt="Chronofora 2" width="300">
+</p>
+
 __Motivating example__: I wanted to deform the Earth (represented as a unit sphere) so that distances on the deformed surface represent travel times between locations. To give you an idea, in terms of fastest accessible transportation, from New York it takes 6-7h to get to Paris, while it takes 2-3 days to get to the middle of the Atlantic Ocean. So on the deformed version of the Earth, the geodesic distance (meaning, the shortest distance on the surface) between what are supposed to be New York and Paris is much smaller than the distance to the middle of the Atlantic Ocean. As you might have guessed, __Chronofora__ (the title of the project) is the tentative name I have given to this new Earth-potato planet (feel free to let me know if you have any better ideas).
 
-![Demo Animation](docs/chronofora_gif.gif)
+<p align="center">
+  ![Chronofora video](docs/chronofora_gif.gif)
+</p>
 
 __A reason why that is only an approximation in practice__: You might also have guessed that this problem does not seem to have a solution: for instance, we can safely assume that on Earth, all the points equidistant to NY and Paris are further away in terms of transportation time from either of them than the other city. With this in mind, if there existed an accurate deformation of the Earth, it would necessarily violate continuity, and therefore not be a deformation as intended. This is one of the reasons why the embedding constructed is _quasi_-isometric rather than perfectly isometric.
 
