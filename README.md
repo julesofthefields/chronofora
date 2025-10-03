@@ -21,6 +21,15 @@ Originally, the aim of this project is mainly artistic. But beyond providing som
 
 This is only a first version of Chronofora at this stage (there is a lot of room for improvement), but please let me know what you think!
 
+<p align="center">
+  <img src="docs/ny_tokyo_tana.png" alt="Chronofora 3">
+</p>
+
+<p align="center">
+  <img src="docs/sydney.png" alt="Chronofora 4">
+</p>
+
+
 ## Features and Project Structure
 
 The main part of the project resides in __get_mesh.py__. This script loads the Chronofora data, asks which cities you'd like to see plotted on the surface, and opens visualization windows to explore the geometry.
