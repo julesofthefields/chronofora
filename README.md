@@ -40,7 +40,7 @@ __A note on accuracy__: You may notice some geometric inconsistencies in the res
 
 ## More technical paper
 
-To follow.
+Feel free to read [a more technical (but still high-level) explanation of the project](https://docs.google.com/document/d/1hRZtFsI085Zwk_QMTc8xUGCaGwTRodwX/edit?usp=sharing&ouid=103759000035227870125&rtpof=true&sd=true).
 
 ## Future improvements
 
