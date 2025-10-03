@@ -5,8 +5,8 @@
 This project provides a framework to reshape a closed 2D surface in 3D so that geodesic distances (the shortest path between two points along the deformed surface) reflect a custom distance metric. In other words, it constructs a 2D surface in 3D whose intrinsic geometry (geodesic distances) is quasi-isometric to a given metric space.
 
 <p align="center">
-  <img src="docs/smiling.png" alt="Chronofora 1" width="300">
-  <img src="docs/dancing.png" alt="Chronofora 2" width="300">
+  <img src="docs/smiling.png" alt="Chronofora 1" width="500">
+  <img src="docs/dancing.png" alt="Chronofora 2" width="500">
 </p>
 
 __Motivating example__: I wanted to deform the Earth (represented as a unit sphere) so that distances on the deformed surface represent travel times between locations. To give you an idea, in terms of fastest accessible transportation, from New York it takes 6-7h to get to Paris, while it takes 2-3 days to get to the middle of the Atlantic Ocean. So on the deformed version of the Earth, the geodesic distance (meaning, the shortest distance on the surface) between what are supposed to be New York and Paris is much smaller than the distance to the middle of the Atlantic Ocean. As you might have guessed, __Chronofora__ (the title of the project) is the tentative name I have given to this new Earth-potato planet (feel free to let me know if you have any better ideas).
