@@ -34,7 +34,7 @@ The main part of the project resides in __get_mesh.py__. This script loads the C
 The rest of the project is structured as such:
 - __get_X_transportation_geometry.py__ processes open-source transportation datasets (flight, train, ferry, car) to compute transportation times between fixed "transportation stations";
 - __get_X_geometry.py__ proposes a heuristic method to compute multimodal travel times between arbitrary global locations, and then computes the pairwise distances of a regular sample of N points on Planet Earth;
-- __surface_spring_system.py__ builds the object necessary to deform the surface -- a large-scale spring (and "superspring") system, with some additional constraints to keep the 2D aspect of the surface -- and __run_spring.py__ runs the simulation;
+- __surface_spring_system.py__ builds the object necessary to deform the surface -- a large-scale spring (and "superspring") system, with some additional constraints to keep the 2D aspect of the surface -- and __run_spring.py__ runs the simulation (in the current state, with 10,000 points it is extremely long and I have had to rent GPUs -- but it can probably be imrpoved as noted later on);
 - __map_utils.py__ provides some utiliary functions.
 
 __A note on accuracy__: You may notice some geometric inconsistencies in the result. Remember, this problem has no perfect solution — Chronofora represents a "best possible" approximation in a specific optimization sense. Additionally, some parameters were chosen to favor the visual appeal of the shape over strict accuracy. As a result, you might find pairs of points that are unusually close (or far) on Chronofora despite their actual travel times suggesting otherwise. This is subject to improvement.
