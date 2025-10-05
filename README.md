@@ -8,7 +8,7 @@ This project provides a framework to construct a 2D surface in 3D whose intrinsi
   <img src="docs/intro_chronofora.png" alt="Chronofora 1" width="800">
 </p>
 
-__Motivating example__: I wanted to deform the Earth (represented as a unit sphere) so that distances on the deformed surface represent travel times between locations. To give you an idea, in terms of fastest accessible transportation, from New York it takes 6-7h to get to Paris, while it takes 2-3 days to get to the middle of the Atlantic Ocean. So on the deformed version of the Earth, the geodesic distance (meaning, the shortest distance on the surface) between what are supposed to be New York and Paris is much smaller than the distance to the middle of the Atlantic Ocean. As you might have guessed, __Chronofora__ (the title of the project) is the tentative name I have given to this new Earth-potato planet (feel free to let me know if you have any better ideas).
+__Motivating example__: I wanted to deform Earth so that distances on the deformed surface represent travel times between locations. To give you an idea, in terms of fastest accessible transportation, from New York it takes 6-7h to get to Paris, while it takes 2-3 days to get to the middle of the Atlantic Ocean. So on the deformed version of Earth, the geodesic distance (meaning, the shortest distance on the surface) between what are supposed to be New York and Paris is much smaller than the distance to the middle of the Atlantic Ocean. As you might have guessed, __Chronofora__ (the title of the project) is the tentative name I have given to this new Earth-potato planet (feel free to let me know if you have any better ideas).
 
 <p align="center">
   <img src="docs/chronofora_gif.gif" alt="Chronofora video" width="600">
