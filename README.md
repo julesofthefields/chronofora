@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project provides a framework to reshape a closed 2D surface in 3D so that geodesic distances (the shortest path between two points along the deformed surface) reflect a custom distance metric. In other words, it constructs a 2D surface in 3D whose intrinsic geometry (geodesic distances) is quasi-isometric to a given metric space.
+This project provides a framework to construct a 2D surface in 3D whose intrinsic geometry is quasi-isometric to a given metric space. In layman terms, to reshape a 2d surface so that geodesic distances ( shortest paths between 2 points along the deformed surface) reflect a custom distance. If that is still unclear - it probably is - the motivating example should clarify things.
 
 <p align="center">
   <img src="docs/intro_chronofora.png" alt="Chronofora 1" width="800">
@@ -14,7 +14,7 @@ __Motivating example__: I wanted to deform the Earth (represented as a unit sphe
   <img src="docs/chronofora_gif.gif" alt="Chronofora video" width="600">
 </p>
 
-__This is only an approximation in practice__: You might also have guessed that this problem does not seem to have a solution: for instance, we can safely assume that on Earth, all the points equidistant to NY and Paris are further away in terms of transportation time from either of them than the other city. With this in mind, if there existed an accurate deformation of the Earth, it would necessarily violate continuity, and therefore not be a deformation as intended. This is one of the reasons why the embedding constructed is _quasi_-isometric rather than perfectly isometric.
+__This is only an approximation in practice__. You might also have guessed that this problem does not seem to have a solution: for instance, we can safely assume that on Earth, all the points equidistant to NY and Paris are further away in terms of transportation time from either of them than the other city. With this in mind, if there existed an accurate deformation of the Earth, it would necessarily violate continuity, and therefore not be a deformation as intended. This is one of the reasons why the embedding constructed is _quasi_-isometric rather than perfectly isometric.
 
 Originally, the aim of this project is mainly "artistic". But beyond providing some cool and fun shapes, it also stands as an algorithm to visualize how given metrics can distort 2D surfaces in 3D, which may prove useful in some more concrete cases: it could help visualize brain connectivity where neural pathway strengths define distances between regions, or diffusion processes on surfaces where propagation time rather than geometric distance is the relevant metric. And as far as I know, there are no other algorithms in the literature which seem to tackle this visualization problem, as all classical visualization methods assume a flat Euclidean target space.
 
@@ -40,7 +40,7 @@ __A note on accuracy__: You may notice some geometric inconsistencies in the res
 
 ## More technical paper
 
-Feel free to read [a more technical (but still high-level) explanation of the project](https://docs.google.com/document/d/1hRZtFsI085Zwk_QMTc8xUGCaGwTRodwX/edit?usp=sharing&ouid=103759000035227870125&rtpof=true&sd=true).
+Feel free to read [a more technical (but still high-level) explanation of the project]([https://docs.google.com/document/d/1hRZtFsI085Zwk_QMTc8xUGCaGwTRodwX/edit?usp=sharing&ouid=103759000035227870125&rtpof=true&sd=true](https://drive.google.com/file/d/1ptma02_3OVJry12zu2Q5V33ybN_jBmWP/view?usp=sharing)).
 
 ## Future improvements
 
