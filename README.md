@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project provides a framework to construct a 2D surface in 3D whose intrinsic geometry is quasi-isometric to a given metric space. In layman terms, to reshape a 2d surface so that geodesic distances (shortest paths between 2 points along the deformed surface) reflect a custom distance. If that is still unclear - it probably is - the motivating example should clarify things.
+This project provides a framework to construct a 2D surface in 3D whose intrinsic geometry is quasi-isometric to a given metric space. In layman terms, to reshape a 2D surface so that geodesic distances (shortest paths between 2 points along the deformed surface) reflect a custom distance. If that is still unclear - it probably is - the motivating example should clarify things.
 
 <p align="center">
   <img src="docs/intro_chronofora.png" alt="Chronofora 1" width="800">
